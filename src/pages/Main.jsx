@@ -52,11 +52,7 @@ const Main=() => {
             </div>
         </section>
 
-
         {/*   <Portfolio portfolioLinks={portfolioLinks}></Portfolio>*/}
-
-
-
 
         <section className="page-section" id="about">
             <div className="container">

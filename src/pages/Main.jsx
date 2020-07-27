@@ -1,5 +1,6 @@
 import React from 'react';
-
+import '../assets/css/main/agency.min.css'
+import MovingType from "../components/move/component/MovingType";
 const Main=() => {
     return <div>
         <header className="masthead">
@@ -16,38 +17,13 @@ const Main=() => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 text-center">
-                        <h2 className="section-heading text-uppercase">Services</h2>
-                        <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                        <h2 className="section-heading text-uppercase">무료 견적 Services</h2>
+                        <MovingType/>
+                        <h3 className="section-subheading text-muted">지금 당장 무료 견적을 신청하세요!</h3>
                     </div>
                 </div>
                 <div className="row text-center">
-                    <div className="col-md-4">
-          <span className="fa-stack fa-4x">
-            <i className="fa fa-circle fa-stack-2x text-primary"></i>
-            <i className="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-          </span>
-                        <h4 className="service-heading">E-Commerce</h4>
-                        <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-                            maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
-                    <div className="col-md-4">
-          <span className="fa-stack fa-4x">
-            <i className="fa fa-circle fa-stack-2x text-primary"></i>
-            <i className="fa fa-laptop fa-stack-1x fa-inverse"></i>
-          </span>
-                        <h4 className="service-heading">Responsive Design</h4>
-                        <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-                            maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
-                    <div className="col-md-4">
-          <span className="fa-stack fa-4x">
-            <i className="fa fa-circle fa-stack-2x text-primary"></i>
-            <i className="fa fa-lock fa-stack-1x fa-inverse"></i>
-          </span>
-                        <h4 className="service-heading">Web Security</h4>
-                        <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-                            maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
+
                 </div>
             </div>
         </section>
@@ -58,7 +34,7 @@ const Main=() => {
 
 
 
-        <section className="page-section" id="about">
+        <section className="page-section" id="about" style={{color:"#2176C1"}}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 text-center">

@@ -1,13 +1,13 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import logo from '../assets/images/logo3.png'
-
+import logo2 from '../assets/images/logo2.png'
+import '../assets/css/main/agency.min.css'
 const Navigator = () => {
     return (
-        <div>
+        <div >
             <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
                 <div className="container">
-                    <Link to="/" className="navbar-brand js-scroll-trigger"></Link>
+                    <Link to="/" className="navbar-brand js-scroll-trigger"  />
                     <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                             data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                             aria-label="Toggle navigation">

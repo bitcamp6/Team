@@ -1,15 +1,20 @@
 import React from 'react';
-import './App.css';
-import Routes from '../src/components/routes/Routes'
-import Main from "./pages/Main";
+import Home from "./pages/Home";
+import NavBar from "./commons/NavBar";
+import SideBar from './commons/SideBar'
+import Estimate from "./components/Estimate";
+import Footer from "./commons/Footer";
 
-const App = () => {
+function App() {
     return (
         <div>
-            <Routes/>
-            <Main/>
+            <NavBar/>
+            <SideBar/>
+            <Home/>
+            <Estimate/>
+            <Footer/>
         </div>
-    )
+    );
 }
 
 export default App;

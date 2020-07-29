@@ -1,11 +1,9 @@
 import React from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom'
+import '../assets/css/main.css'
 
-import Main from "../pages/Main";
-import Events from "../pages/Events";
-import Community from "../pages/Community";
-import Contacts from "../pages/Contacts";
-import Navigator from "../commons/Navigator";
+import {Main, Notice, Events, Community, Contacts} from '../pages/index'
+import {Navigator, Footer} from "../commons/index";
 
 const Home = () => {
     return (
@@ -14,7 +12,9 @@ const Home = () => {
                     <Route exact path={"/"}>
                     <Navigator/>
                     <Main/>
+                    <Footer/>
                     </Route>
+                    <Route path={"/notice"} component={Notice}/>
                     <Route path={"/events"} component={Events}/>
                     <Route path={"/community"} component={Community}/>
                     <Route path={"/contacts"} component={Contacts}/>

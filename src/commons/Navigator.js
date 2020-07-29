@@ -6,7 +6,7 @@ import logo from '../assets/img/logo2.png'
 
 export const Navigator = () => (
     <div>
-        <Navbar className="Navi" bg="dark" variant="dark">
+        <Navbar className="navbar-collapse" variant="dark">
             <Navbar.Brand href="#">
                 <img
                     alt=""
@@ -17,9 +17,11 @@ export const Navigator = () => (
                 />{' '}
             </Navbar.Brand>
             <Nav className="ml-auto">
+                <Link to="/"><Navbar.Brand>HOME</Navbar.Brand></Link>
+                <Link to="/notice"><Navbar.Brand>공지사항</Navbar.Brand></Link>
                 <Link to="/events"><Navbar.Brand>이벤트</Navbar.Brand></Link>
                 <Link to ="/community"><Navbar.Brand>커뮤니티</Navbar.Brand></Link>
-                <Link to="/contacts"><Navbar.Brand>고객관리</Navbar.Brand></Link>
+                <Link to="/contacts"><Navbar.Brand>고객지원</Navbar.Brand></Link>
             </Nav>
             <Form inline className="ml-auto">
                 <Link to="/login"><Navbar.Brand>로그인</Navbar.Brand></Link>

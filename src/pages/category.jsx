@@ -14,7 +14,6 @@ const Category = () => {
         });
     };*/
     const [sideNavLeft, setSideNavLeft] = useState('')
-
     const sidenavToggle = () => {
 
     }
@@ -28,10 +27,7 @@ const Category = () => {
 
     }
     const MDBSideNavLink = () => {
-
     }
-
-
         return (
             <Router>
                 <MDBContainer>
@@ -48,7 +44,6 @@ const Category = () => {
                                 </a>
                             </div>
                         </li>
-
                         <MDBSideNavNav>
                             <MDBSideNavLink to="/other-page" topLevel>
                                 <MDBIcon icon="pencil-alt" className="mr-2" />Submit listing</MDBSideNavLink>

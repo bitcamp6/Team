@@ -13,8 +13,8 @@ const Main=() => {
                 </div>
             </div>
         </header>
-        <section className="page-section" id="services">
-            <div className="container">
+        <section className="page-section" id="services" style={{color:"#2176C1"}}>
+            <div className="container" style={{color:"#2176C1"}}>
                 <div className="row">
                     <div className="col-lg-12 text-center">
                         <h2 className="section-heading text-uppercase">무료 견적 Services</h2>
@@ -27,13 +27,7 @@ const Main=() => {
                 </div>
             </div>
         </section>
-
-
         {/*   <Portfolio portfolioLinks={portfolioLinks}></Portfolio>*/}
-
-
-
-
         <section className="page-section" id="about" style={{color:"#2176C1"}}>
             <div className="container">
                 <div className="row">

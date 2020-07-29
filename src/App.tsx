@@ -5,10 +5,9 @@ import Main from "./pages/Main";
 
 const App = () => {
     return (
-        <div>
+        <>
             <Routes/>
-            <Main/>
-        </div>
+        </>
     )
 }
 

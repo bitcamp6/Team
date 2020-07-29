@@ -11,9 +11,9 @@ import '../src/assets/css/main/agency.min.css'
 import '../src/assets/css/main/bootstrap.min.css'
 
 ReactDOM.render(
-    <div>
+    <>
         <App/>
-    </div>,
+    </>,
   document.getElementById('root')
 );
 

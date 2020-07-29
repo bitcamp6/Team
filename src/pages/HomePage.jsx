@@ -1,14 +1,15 @@
 import React from 'react';
 
-const Main=() => {
+
+const HomePage=() => {
     return <div>
         <header className="masthead">
             <div className="container">
                 <div className="intro-text">
-                    <div className="intro-lead-in">It's Nice To Meet You</div>
-                    <div className="intro-heading text-uppercase">Welcome To IZZI!</div>
+                    <div className="intro-lead-in">Welcome To Movin!</div>
+                    <div className="intro-heading text-uppercase">It's Nice To Meet You</div>
                     <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">이사하러 가기
-                    </a>
+                        </a>
                 </div>
             </div>
         </header>
@@ -52,7 +53,11 @@ const Main=() => {
             </div>
         </section>
 
-        {/*   <Portfolio portfolioLinks={portfolioLinks}></Portfolio>*/}
+
+     {/*   <Portfolio portfolioLinks={portfolioLinks}></Portfolio>*/}
+
+
+
 
         <section className="page-section" id="about">
             <div className="container">
@@ -327,7 +332,7 @@ const Main=() => {
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-md-4">
-                        <span className="copyright">Copyright @IZZI 2020</span>
+                        <span className="copyright">Copyright &copy; Your Website 2019</span>
                     </div>
                     <div className="col-md-4">
                         <ul className="list-inline social-buttons">
@@ -363,4 +368,4 @@ const Main=() => {
         </footer>
     </div>
 }
-export default Main;
+export default HomePage;

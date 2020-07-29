@@ -4,9 +4,11 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
 html {
-    background-color: #2176C1
+    background-color: #2176C1;
 }
-
+.main{
+    background-color: #2176C1;
+}
 body {
     overflow-x: hidden;
     font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'
@@ -108,7 +110,7 @@ img::-moz-selection {
 }
 
 #mainNav {
-    background-color: #212529
+    background-color: #212529;
 }
 
 #mainNav .navbar-toggler {

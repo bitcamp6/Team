@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.css';
-import Routes from '../src/components/routes/Routes'
-import Main from "./pages/Main";
-
+import Page from "./pages/Page";
+import {BrowserRouter} from "react-router-dom";
+import Home from "./pages/Home";
 const App = () => {
     return (
-        <div>
-            <Routes/>
-            <Main/>
-        </div>
-    )
+        <>
+      <Home/>
+      </>
+        )
 }
+
 
 export default App;

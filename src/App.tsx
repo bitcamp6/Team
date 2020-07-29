@@ -1,15 +1,14 @@
 import React from 'react';
-import './App.css';
-import Routes from '../src/components/routes/Routes'
-import Main from "./pages/Main";
+import { Route, BrowserRouter, Switch } from 'react-router-dom'
 
-const App = () => {
+import Home from "./pages/Home";
+
+function App() {
     return (
-        <div>
-            <Routes/>
-            <Main/>
-        </div>
-    )
+            <>
+               <Home/>
+            </>
+    );
 }
 
 export default App;

@@ -1,6 +1,6 @@
 import React from "react";
 import {BrowserRouter as Router,Route,Switch,BrowserRouter} from "react-router-dom";
-import Navigator from "../../commons/Navigator";
+import Navigators from "../../commons/Navigator";
 import MovingType from "../move/component/MovingType";
 import VideoUploadPage from "../videoUpload/VideoUploadPage";
 import MovingDate from "../move/component/MovingDate";
@@ -16,7 +16,7 @@ import Map from "../CompanyPage/Map";*/
 
 const Routes = () => (
     <Router >
-        <Navigator/>
+        <Navigators/>
         <BrowserRouter>
         {/*<Route exact path="/login" component={Login}/>
         <Route exact path="/mypage" component={Mypage}/>

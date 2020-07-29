@@ -19,6 +19,7 @@ export const Navigator = () => (
             <Nav className="ml-auto">
                 <Link to="/"><Navbar.Brand>HOME</Navbar.Brand></Link>
                 <Link to="/notice"><Navbar.Brand>공지사항</Navbar.Brand></Link>
+                <Link to="/events"><Navbar.Brand>이벤트</Navbar.Brand></Link>
                 <Link to ="/community"><Navbar.Brand>커뮤니티</Navbar.Brand></Link>
                 <Link to="/contacts"><Navbar.Brand>고객지원</Navbar.Brand></Link>
             </Nav>

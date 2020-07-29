@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom'
 import '../assets/css/main.css'
 
-import {Main, Notice, Community, Contacts} from '../pages/index'
+import {Main, Notice, Events, Community, Contacts} from '../pages/index'
 import {Navigator, Footer} from "../commons/index";
 
 const Home = () => {
@@ -15,6 +15,7 @@ const Home = () => {
                     <Footer/>
                     </Route>
                     <Route path={"/notice"} component={Notice}/>
+                    <Route path={"/events"} component={Events}/>
                     <Route path={"/community"} component={Community}/>
                     <Route path={"/contacts"} component={Contacts}/>
                 </Switch>

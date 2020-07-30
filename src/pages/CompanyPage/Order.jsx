@@ -1,11 +1,12 @@
 import React from 'react';
 import { MDBDataTableV5 } from 'mdbreact';
+import {Link} from "react-router-dom";
 
 export default function SelectSearchTopReverse() {
     const [datatable, setDatatable] = React.useState({
         columns: [
             {
-                label: 'Name',
+                label:  'Name',
                 field: 'name',
                 width: 150,
                 attributes: {
@@ -44,7 +45,7 @@ export default function SelectSearchTopReverse() {
         ],
         rows: [
             {
-                name: 'Tiger Nixon',
+                name:   <Link to="/customerinfo">Tiger Nixon</Link>,
                 position: 'System Architect',
                 office: 'Edinburgh',
                 age: '61',
@@ -183,16 +184,22 @@ export default function SelectSearchTopReverse() {
     });
 
     return (
+        <div>
+            <h1 className="text-center" style={{padding:'1rem'}}>주문 게시판  </h1>
+
         <MDBDataTableV5
+            // bordered 테두리
             hover
             entriesOptions={[5, 20, 25]}
-            entries={5}
+            entries={10}
             pagesAmount={4}
             data={datatable}
             pagingTop
             searchTop
             searchBottom={false}
             barReverse
+            style={{padding:'1rem', margin:'0 auto', maxWidth:1200}}
         />
+        </div>
     );
 }

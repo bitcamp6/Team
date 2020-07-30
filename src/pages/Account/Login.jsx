@@ -5,11 +5,11 @@ import {MDBBtn, MDBCard, MDBCardBody, MDBCol, MDBIcon, MDBInput, MDBModalFooter}
 
 const Login = () => {
     return (
-        <div>
-            <section id="services">
-                <div className="container">
+        <div style={{padding:'6rem', margin:'0 auto', maxWidth:800}}>
+            <section>
+                <div  className="container">
                     <div className="row">
-                        <MDBCol md="6">
+                        <MDBCol>
                             <MDBCard>
                                 <MDBCardBody className="mx-4">
                                     <div className="text-center">
@@ -40,14 +40,14 @@ const Login = () => {
                                         </a>
                                     </p>
                                     <div className="text-center mb-3">
-                                        <MDBBtn
+                                        <Link to="/mypage"><MDBBtn
                                             type="button"
                                             gradient="blue"
                                             rounded
                                             className="btn-block z-depth-1a"
                                         >
                                             Login
-                                        </MDBBtn>
+                                        </MDBBtn></Link>
                                     </div>
                                     <p className="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2">
 

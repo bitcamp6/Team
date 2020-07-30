@@ -4,11 +4,11 @@ import {Link} from "react-router-dom";
 
 const Signup = () => {
     return (
-        <div>
-            <section id="services">
+        <div  style={{padding:'6rem', margin:'0 auto', maxWidth:800}}>
+            <section>
                 <div className="container">
                     <div className="row">
-                        <MDBCol md="6">
+                        <MDBCol>
                             <MDBCard>
                                 <MDBCardBody className="mx-4">
                                     <div className="text-center">

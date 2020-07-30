@@ -1,5 +1,5 @@
 import React from "react";
-import { RenderAfterNavermapsLoaded, NaverMap,Marker } from "react-naver-maps";
+/*import { RenderAfterNavermapsLoaded, NaverMap,Marker } from "react-naver-maps";
 function NaverMapAPI() {
     const navermaps = window.naver.maps;
     return (
@@ -31,5 +31,5 @@ function Map() {
             <NaverMapAPI />
         </RenderAfterNavermapsLoaded>
     );
-}
+}*/
 export default Map;

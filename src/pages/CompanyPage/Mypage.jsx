@@ -3,8 +3,7 @@ import {Link} from "react-router-dom";
 
 const Mypage = () => {
     return (
-        <div>
-
+        <div style={{padding:"4rem"}}>
             <section className="page-section" id="services">
                 <div className="container">
                     <div className="row">
@@ -20,7 +19,7 @@ const Mypage = () => {
             <i className="fa fa-circle fa-stack-2x text-primary"></i>
             <i className="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
           </span>
-                            <Link to="/payment"><h2 className="service-heading">주문 관리</h2></Link>
+                            <Link to="/order"><h2 className="service-heading">주문 관리</h2></Link>
                             <h2 className="text">5건</h2>
                         </div>
                         <div className="col-md-4">
@@ -36,7 +35,7 @@ const Mypage = () => {
             <i className="fa fa-circle fa-stack-2x text-primary"></i>
             <i className="fa fa-lock fa-stack-1x fa-inverse"></i>
           </span>
-                            <Link to="/order"><h2 className="service-heading">통계</h2></Link>
+                            <Link to="/statistics"><h2 className="service-heading">통계</h2></Link>
                             <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
                                 maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                         </div>
@@ -44,7 +43,7 @@ const Mypage = () => {
                 </div>
             </section>
 
-        <section className="page-section" id="services">
+        <section style={{padding:'1rem', margin:'0 auto', maxWidth:500}}>
           <div className="container">
             <div className="row text-center">
                 <div className="col-lg-12" >

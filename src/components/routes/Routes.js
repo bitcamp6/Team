@@ -5,7 +5,7 @@ import MovingType from "../move/component/MovingType";
 import VideoUploadPage from "../videoUpload/VideoUploadPage";
 import MovingDate from "../move/component/MovingDate";
 import MovingStartPoint from "../move/component/movingPoint/MovingStartPoint";
-import Kd from "../../pages/Main";
+import Main from "../../pages/Main";
 import Esti from "../move/component/Esti";
 /*import Login from "../member/Login";
 import Main from "../pages/Main";
@@ -26,7 +26,7 @@ const Routes = () => (
         <Route exact path="/" component={Main}/>*/}
             <Switch>
 
-                <Route exact path={"/"} component={Kd}/>
+                <Route exact path={"/"} component={Main}/>
                 <Route path="/estimate">
                     <Esti/>
                 </Route>

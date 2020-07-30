@@ -1,15 +1,11 @@
 import React from "react";
-import HomePage from "./HomePage";
 import {BrowserRouter, BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Navigator from "../common/Navigator";
-import {Payment,Map2,Order,Reviews,Mypage,Map} from "./CompanyPage"
-import {Signup,Login} from "./Account/";
-import Statistics from "./CompanyPage/statistics";
+
 
 function Page () {
     return (
         <Switch>
-            <Route path="/" exact>
+            {/*<Route path="/" exact>
             <Navigator/>
             <HomePage/>
             </Route>
@@ -56,7 +52,7 @@ function Page () {
 
             <Route path="/map" >
             <Map/>
-            </Route>
+            </Route>*/}
 
 
         </Switch>

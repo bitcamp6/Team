@@ -4,7 +4,8 @@ import '../assets/css/main.css'
 
 import {Main, Notice, Events, Community, Contacts} from '../pages/index'
 import {Navigator, Footer} from "../commons/index";
-import Map2 from "./CompanyPage/Map2";
+import {Login, Signup} from "./Account";
+import {CustomerInfo, Mypage, Order, Payment, Statistics,GoogleMapClass} from "./CompanyPage";
 
 const Home = () => {
     return (
@@ -16,9 +17,48 @@ const Home = () => {
                     <Footer/>
                     </Route>
 
-                    <Route path="/map2" >
+                    <Route path="/googlemapclass" >
                         <Navigator/>
-                        <Map2/>
+                        <GoogleMapClass/>
+                    </Route>
+
+
+                    <Route path="/login" >
+                        <Navigator/>
+                        <Login/>
+                        <Footer/>
+                    </Route>
+
+                    <Route path="/signup" >
+                        <Navigator/>
+                        <Signup/>
+                        <Footer/>
+                    </Route>
+
+                      <Route path="/mypage" >
+                        <Navigator/>
+                        <Mypage/>
+                        <Footer/>
+                    </Route>
+
+                    <Route path="/order" >
+                        <Navigator/>
+                        <Order/>
+                    </Route>
+
+                    <Route path="/payment">
+                        <Navigator/>
+                        <Payment/>
+                    </Route>
+
+                     <Route path="/statistics">
+                        <Navigator/>
+                        <Statistics/>
+                    </Route>
+
+                    <Route path="/customerinfo">
+                        <Navigator/>
+                        <CustomerInfo/>
                     </Route>
 
                     <Route path={"/notice"} component={Notice}/>

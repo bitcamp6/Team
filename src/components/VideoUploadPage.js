@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React,{useState} from 'react';
 import Dropzone from "react-dropzone";
 import {MDBBtn, MDBIcon, MDBTypography} from 'mdbreact'
-
+import Axios from 'axios'
 
 const PrivateOptions=[
     {value:0,label:"Private"},
@@ -33,6 +33,22 @@ const VideoUploadPage = () => {
     const onChangeCategory=e=>{
         setCategory(e.currentTarget.value)
     }
+    const onDrop=(files) =>{
+        let formDate = new FormData;
+        const config = {
+            header:{'content-type':'multipart/form-data'}
+        }
+        formDate.append("file",files[0])
+        Axios.post('/api/video/uploadfiles',formDate,config)
+            .then(response=>{
+                if(response.data.success){
+
+                }else {
+                    alert('비디오 업로드에 실패했습니다  ')
+                }
+            })
+        console.log(files)
+    }
     return (
         <div style={{maxWidth:'700px',margin:'2rem auto'}}>
             <div style={{textAlign:'center',marginButton:'2rem'}}>
@@ -43,7 +59,7 @@ const VideoUploadPage = () => {
             <div onSubmit>
                 <div style={{display:'flex',justifyContent:'space-between'}}>
                     {/*드랍존*/}
-                    <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
+                    <Dropzone onDrop={onDrop} multiple={true} maxSize={1000000}>
                         {({getRootProps, getInputProps}) => (
                             <section>
                                 <div {...getRootProps()}>

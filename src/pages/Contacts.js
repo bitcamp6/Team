@@ -85,6 +85,7 @@ const Contacts = () => {
                     </div>
                     {/* /#page-wrapper */}
                 </div>
+            <Footer/>
         </>
     );
 };

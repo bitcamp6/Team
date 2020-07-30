@@ -142,6 +142,7 @@ const Community = () => {
                                                                     </tr>
                                                                     </tbody>
                                                             </table>
+                                                            <a href="/write">글쓰기</a>
                                                     </div>
                                                     {/* /.panel-body */}
                                             </div>

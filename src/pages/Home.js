@@ -5,7 +5,7 @@ import '../assets/css/main.css'
 import {Main, Notice, Contacts, Write} from '../pages/index'
 import {Review, Market, Community} from '../pages/community/index'
 
-import {Navigator, Footer, SideBar} from "../commons/index";
+import {Navigator, Footer} from "../commons/index";
 
 const Home = () => {
     return(
@@ -13,7 +13,6 @@ const Home = () => {
             <Switch>
                 <Route exact path={"/"}>
                     <Navigator/>
-                    <SideBar/>
                     <Main/>
                     <Footer/>
                 </Route>

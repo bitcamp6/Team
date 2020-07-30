@@ -8,7 +8,7 @@ const SideBar = () => {
         <>
         <nav className="sidebar sidebar-offcanvas">
             <ul className="nav">
-                <li className="nav-item nav-category"><h1>커뮤니티</h1></li>
+                <li className="nav-item nav-category"><h1>게시판</h1></li>
                 <li className="nav-item">
                     <a className="nav-link" href="#">
                         <span className="menu-title">전체 글 보기</span>

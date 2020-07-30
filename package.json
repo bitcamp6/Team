@@ -59,7 +59,6 @@
     ]
   },
   "devDependencies": {
-    "react-calendar": "^3.1.0",
     "react-sidebar-ui": "^1.2.0",
     "ts-node": "^8.10.2",
     "typescript": "^3.7.5"

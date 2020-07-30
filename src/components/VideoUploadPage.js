@@ -1,7 +1,11 @@
+
 import React,{useState} from 'react';
 import Dropzone from "react-dropzone";
 import {MDBBtn, MDBIcon, MDBTypography} from 'mdbreact'
 import Axios from 'axios'
+import Drag from "./videoUpload/Drag";
+import Card from "./videoUpload/Card";
+
 
 const PrivateOptions=[
     {value:0,label:"Private"},
@@ -33,6 +37,7 @@ const VideoUploadPage = () => {
     const onChangeCategory=e=>{
         setCategory(e.currentTarget.value)
     }
+
     const onDrop=(files) =>{
         let formDate = new FormData;
         const config = {
@@ -49,9 +54,20 @@ const VideoUploadPage = () => {
             })
         console.log(files)
     }
+
     return (
         <div style={{maxWidth:'700px',margin:'2rem auto'}}>
             <div style={{textAlign:'center',marginButton:'2rem'}}>
+                <Drag id={"drag-1"} className={"drag"} >
+                    <Card id={"card-1"} className={"card"} draggable={"true"}>
+                        <p>카드 한개</p>
+                    </Card>
+                </Drag>
+                <Drag id={"drag-2"} className={"drag"} >
+                    <Card id={"card-2"} className={"card"} draggable={"true"}>
+                        <p>카드 둘</p>
+                    </Card>
+                </Drag>
                 <MDBTypography>
                     업로드 비디오
                 </MDBTypography>
@@ -59,6 +75,7 @@ const VideoUploadPage = () => {
             <div onSubmit>
                 <div style={{display:'flex',justifyContent:'space-between'}}>
                     {/*드랍존*/}
+
                     <Dropzone onDrop={onDrop} multiple={true} maxSize={1000000}>
                         {({getRootProps, getInputProps}) => (
                             <section>

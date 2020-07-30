@@ -14,7 +14,7 @@ export const Navigator = () => (
                     width="75"
                     height="75"
                     className="d-inline-block align-top"
-                />{' '}
+                />{''}
             </Navbar.Brand>
             <Nav className="ml-auto">
                 <Link to="/"><Navbar.Brand>HOME</Navbar.Brand></Link>
@@ -22,6 +22,7 @@ export const Navigator = () => (
                 <Link to="/events"><Navbar.Brand>이벤트</Navbar.Brand></Link>
                 <Link to ="/community"><Navbar.Brand>커뮤니티</Navbar.Brand></Link>
                 <Link to="/contacts"><Navbar.Brand>고객지원</Navbar.Brand></Link>
+                <Link to="/googlemapclass"><Navbar.Brand>Map2</Navbar.Brand></Link>
                 <Link to="/videoUpload"><Navbar.Brand>비디오업로드</Navbar.Brand></Link>
             </Nav>
             <Form inline className="ml-auto">

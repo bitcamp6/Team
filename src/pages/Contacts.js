@@ -16,7 +16,7 @@ const Contacts = () => {
                     <div id="page-wrapper">
                         <div className="row">
                             <div className="col-lg-12"><br/>
-                                <h2 className="page-header">후기</h2><br/>
+                                <h2 className="page-header">고객 지원</h2><br/>
                             </div>
                         </div>
                         <div className="row">

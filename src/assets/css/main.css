@@ -158,12 +158,11 @@ main.masthead .intro-text .intro-heading {
 .footer {
     text-align: center;
     background: #2176C1;
-    padding: 20px 1rem;
+    padding: 30px 1rem;
     transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
     -webkit-transition: all 0.25s ease;
     -ms-transition: all 0.25s ease;
-    border-top: 1px solid #cdd6dc;
     font-size: 1.2em;
     font-family: "roboto", sans-serif;
     border: 0px;

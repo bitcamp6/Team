@@ -7,7 +7,7 @@ import logo from '../assets/img/logo2.png'
 export const Navigator = () => (
     <div>
         <Navbar className="navbar-collapse" variant="dark">
-            <Navbar.Brand href="#">
+            <Link to="/"><Navbar.Brand>
                 <img
                     alt=""
                     src = {logo}
@@ -15,7 +15,7 @@ export const Navigator = () => (
                     height="75"
                     className="d-inline-block align-top"
                 />{' '}
-            </Navbar.Brand>
+            </Navbar.Brand></Link>
             <Nav className="ml-auto">
                 <Link to="/"><Navbar.Brand>HOME</Navbar.Brand></Link>
                 <Link to="/notice"><Navbar.Brand>공지사항</Navbar.Brand></Link>

@@ -11,7 +11,7 @@ const Write = () => {
                         <div id="page-wrapper">
                             <div className="row">
                                 <div className="col-lg-12"><br/>
-                                    <h2 className="page-header">이벤트</h2><br/>
+                                    <h2 className="page-header">커뮤니티</h2><br/>
                                 </div>
                             </div>
                             <div className="row">

@@ -1,12 +1,21 @@
-import React from 'react';
-import {MDBBtn, MDBCard, MDBCardBody, MDBCol, MDBIcon, MDBInput, MDBModalFooter} from "mdbreact";
+import React, {useState} from 'react';
+import {MDBBtn, MDBCard, MDBCardBody, MDBCol, MDBContainer, MDBIcon, MDBInput, MDBModalFooter} from "mdbreact";
 import {Link} from "react-router-dom";
+import {Button} from "react-bootstrap";
+import {Postcode} from '../Account'
 
 const Signup = () => {
+    const[userId,setUserId]=useState("")
+    const[password,setPassword]=useState("")
+    const[name,setName]= useState("")
+    const[addr,setAddr]=useState("")
+    const[email,setEmail]=useState("")
+
+
     return (
-        <div  style={{padding:'6rem', margin:'0 auto', maxWidth:800}}>
+        <div  style={{padding:'6rem', margin:'0 auto', maxWidth:800, maxHeight: 1000}}>
             <section>
-                <div className="container">
+                <div className="container" style={{maxHeight: 1000}}>
                     <div className="row">
                         <MDBCol>
                             <MDBCard>
@@ -17,27 +26,56 @@ const Signup = () => {
                                         </h3>
                                     </div>
                                     <MDBInput
-                                        label="Your ID"
+                                        label="아이디를 입력해주세요."
                                         group
                                         type="text"
                                         validate
                                         error="wrong"
                                         success="right"
+                                        value={userId}
+                                        onChange={e=>setUserId(e.target.value)}
                                     />
                                     <MDBInput
-                                        label="Your password"
+                                        label="비밀번호를 입력해주세요."
                                         group
                                         type="password"
                                         validate
                                         containerClass="mb-0"
+                                        value={password}
+                                        onChange={e=>setPassword(e.target.value)}
                                     />
-                                    <p className="font-small blue-text d-flex justify-content-end pb-3">
-                                        Forgot
-                                        <a href="#!" className="blue-text ml-1">
+                                    <MDBInput
+                                        label="이름을 입력해주세요."
+                                        group
+                                        type="text"
+                                        validate
+                                        containerClass="mb-0"
+                                        value={name}
+                                        onChange={e=>setName(e.target.value)}
+                                    />
+                                    <MDBInput
+                                        label="주소를 입력해주세요."
+                                        group
+                                        type="text"
+                                        validate
+                                        containerClass="mb-0"
+                                        value={addr}
+                                        onChange={e=>setAddr(e.target.value)}
+                                    />
+                                    <div className="input-group-append">
+                                        <Postcode onSelectedAddr={setAddr} />
+                                    </div>
+                                    <MDBInput
+                                        label="이메일 주소를 입력해주세요"
+                                        group
+                                        type="text"
+                                        validate
+                                        containerClass="mb-0"
+                                        value={email}
+                                        onChange={e=>setEmail(e.target.value)}
 
-                                            Password?
-                                        </a>
-                                    </p>
+                                    />
+
                                     <div className="text-center mb-3">
                                         <MDBBtn
                                             type="button"
@@ -48,35 +86,7 @@ const Signup = () => {
                                             회원가입 하기
                                         </MDBBtn>
                                     </div>
-                                    <p className="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2">
-
-                                        or Login with:
-                                    </p>
                                     <div className="row my-3 d-flex justify-content-center">
-                                        <MDBBtn
-                                            type="button"
-                                            color="white"
-                                            rounded
-                                            className="mr-md-3 z-depth-1a"
-                                        >
-                                            <MDBIcon fab icon="facebook-f" className="blue-text text-center" />
-                                        </MDBBtn>
-                                        <MDBBtn
-                                            type="button"
-                                            color="white"
-                                            rounded
-                                            className="mr-md-3 z-depth-1a"
-                                        >
-                                            <MDBIcon fab icon="twitter" className="blue-text" />
-                                        </MDBBtn>
-                                        <MDBBtn
-                                            type="button"
-                                            color="white"
-                                            rounded
-                                            className="z-depth-1a"
-                                        >
-                                            <MDBIcon fab icon="google-plus-g" className="blue-text" />
-                                        </MDBBtn>
                                     </div>
                                 </MDBCardBody>
                                 <MDBModalFooter className="mx-5 pt-3 mb-1">

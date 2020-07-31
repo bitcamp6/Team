@@ -12,8 +12,7 @@ import AutoComplete from 'react-google-autocomplete'
 
 Geocode.setApiKey("AIzaSyCrQuKKwt0DtPF8vxKPx6dRq3us6me2LO8");
 
-class Map3 extends React.Component {
-
+class GoogleMapClass extends React.Component {
     state={
         address: '',
         city: '',
@@ -52,8 +51,8 @@ class Map3 extends React.Component {
     getCity = (addressArray) => {
         let city = '';
         for (let i = 0; i < addressArray.length; i++) {
-            if (addressArray[i].types[0] && 'administrative_area_level_2' === addressArray[i].types[0]) {
-                city = addressArray[i].long_name;
+            if ( addressArray[i].types[0] && 'administrative_area_level_2' === addressArray[i].types[0]) {
+                city = addressArray[i].long_name; // ex) "Upper Lachlan Shire Council"
                 return city;
             }
         }
@@ -83,10 +82,11 @@ class Map3 extends React.Component {
             }
         }
     };
-    onMarkerDragEnd =(event)=>{
+    onMarkerDragEnd =(event)=>{   // 드래그 끝나는지점 위치
         //
         let newLat = event.latLng.lat() //위도
         let newLng = event.latLng.lng() // 경도
+        console.log(newLat,newLng)
 
         Geocode.fromLatLng(newLat,newLng) // Geocode가 위도,경도로부터 주소를 가져온다.
             .then(response=>{
@@ -112,9 +112,10 @@ class Map3 extends React.Component {
                     }
                 })
             })
-        console.log('newLat',newLat)
+        console.log('newLat',newLat,'newLng',newLng)
     }
-    onPlaceSelected= (place)=>{
+        onPlaceSelected= (place)=>{
+        console.log(place)
         const address = place.formatted_address,
             addressArray= place.address_components,
             city= this.getCity(addressArray),
@@ -151,7 +152,7 @@ class Map3 extends React.Component {
                 >
                     <InfoWindow>
                         <div>
-                            Hello
+                            {this.state.address}
                         </div>
                     </InfoWindow>
                 </Marker>
@@ -161,8 +162,8 @@ class Map3 extends React.Component {
                     types={['(regions)']} // type of places in google place API
                     onPlaceSelected = {this.onPlaceSelected} // drag했을때도 가져오기위해
                     /*onPlaceSelected = {(place)=>{
-                            console.log(place) // address_components, formatted_address 같은 정보 찍힘
-                        }}*/
+                        console.log(place) // address_components, formatted_address 같은 정보 찍힘
+                        }} */
                 />
 
             </GoogleMap>
@@ -177,7 +178,7 @@ class Map3 extends React.Component {
                     <Descriptions.Item label="Address">{this.state.address}</Descriptions.Item>
                 </Descriptions>
                 <MapWithAMarker
-                    googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrQuKKwt0DtPF8vxKPx6dRq3us6me2LO8&v=3.exp&libraries=geometry,drawing,places"
+                    googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrQuKKwt0DtPF8vxKPx6dRq3us6me2LO8&language=ko&v=3.exp&libraries=geometry,drawing,places"
                     loadingElement={<div style={{ height: `100%` }} />}
                     containerElement={<div style={{ height: `400px` }} />}
                     mapElement={<div style={{ height: `100%` }} />}
@@ -187,4 +188,4 @@ class Map3 extends React.Component {
     }
 }
 
-export default Map3;
+export default GoogleMapClass

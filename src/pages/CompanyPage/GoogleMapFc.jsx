@@ -86,8 +86,8 @@ const Map2=()=> {
                 const address= response.results[0].formatted_address,
                     addressArray = response.results[0].address_components,
                     city= getCity(addressArray)
-                area= getArea(addressArray)
-                state= getState(addressArray);
+                    area= getArea(addressArray)
+                    state= getState(addressArray);
 
                 this.setState({   // 받아온 값(city,area,State)들을 위에 state에 넣어주기 위해
                     address: (address) ? address: "",
